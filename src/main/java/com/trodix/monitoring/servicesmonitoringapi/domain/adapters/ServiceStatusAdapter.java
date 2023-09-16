@@ -1,6 +1,6 @@
 package com.trodix.monitoring.servicesmonitoringapi.domain.adapters;
 
-import com.trodix.monitoring.servicesmonitoringapi.api.responses.HealthStatus;
+import com.trodix.monitoring.servicesmonitoringapi.domain.models.HealthStatus;
 
 import java.util.List;
 

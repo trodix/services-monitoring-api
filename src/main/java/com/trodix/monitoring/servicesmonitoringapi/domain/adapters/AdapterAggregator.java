@@ -1,6 +1,6 @@
 package com.trodix.monitoring.servicesmonitoringapi.domain.adapters;
 
-import com.trodix.monitoring.servicesmonitoringapi.api.responses.HealthStatus;
+import com.trodix.monitoring.servicesmonitoringapi.domain.models.HealthStatus;
 import com.trodix.monitoring.servicesmonitoringapi.domain.adapters.docker.DockerAdapter;
 import com.trodix.monitoring.servicesmonitoringapi.domain.adapters.http.HttpAdapter;
 import com.trodix.monitoring.servicesmonitoringapi.domain.adapters.springactuator.SpringActuatorAdapter;
@@ -12,7 +12,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class AdpaterAggregator {
+public class AdapterAggregator {
 
     private final DockerAdapter dockerAdapter;
 

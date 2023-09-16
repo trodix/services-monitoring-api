@@ -7,7 +7,7 @@ import com.github.dockerjava.core.DockerClientConfig;
 import com.github.dockerjava.core.DockerClientImpl;
 import com.github.dockerjava.httpclient5.ApacheDockerHttpClient;
 import com.github.dockerjava.transport.DockerHttpClient;
-import com.trodix.monitoring.servicesmonitoringapi.api.responses.HealthStatus;
+import com.trodix.monitoring.servicesmonitoringapi.domain.models.HealthStatus;
 import com.trodix.monitoring.servicesmonitoringapi.domain.adapters.ServiceStatusAdapter;
 import com.trodix.monitoring.servicesmonitoringapi.domain.models.ServiceStatus;
 import org.springframework.stereotype.Service;
