@@ -1,4 +1,4 @@
-package com.trodix.monitoring.servicesmonitoringapi.domain.adapters;
+package com.trodix.monitoring.servicesmonitoringapi.domain.adapters.docker;
 
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.model.Container;
@@ -8,7 +8,8 @@ import com.github.dockerjava.core.DockerClientImpl;
 import com.github.dockerjava.httpclient5.ApacheDockerHttpClient;
 import com.github.dockerjava.transport.DockerHttpClient;
 import com.trodix.monitoring.servicesmonitoringapi.api.responses.HealthStatus;
-import com.trodix.monitoring.servicesmonitoringapi.config.DockerAdapterProperties;
+import com.trodix.monitoring.servicesmonitoringapi.domain.adapters.ServiceStatusAdapter;
+import com.trodix.monitoring.servicesmonitoringapi.domain.adapters.docker.DockerAdapterProperties;
 import com.trodix.monitoring.servicesmonitoringapi.domain.models.ServiceStatus;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +17,7 @@ import java.time.Duration;
 import java.util.List;
 
 @Service
-public class DockerAdapter {
+public class DockerAdapter implements ServiceStatusAdapter {
 
     private final DockerClient dockerClient;
 
@@ -41,7 +42,8 @@ public class DockerAdapter {
         this.dockerClient = DockerClientImpl.getInstance(config, httpClient);
     }
 
-    public List<HealthStatus> getContainersStatus() {
+    @Override
+    public List<HealthStatus> getServicesStatus() {
         List<Container> containers = dockerClient.listContainersCmd()
                 .withShowAll(true)
                 .exec();

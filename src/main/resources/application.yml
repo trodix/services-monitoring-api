@@ -1,3 +1,5 @@
+server:
+  port: 9015
 
 adapters:
   docker:
@@ -6,3 +8,6 @@ adapters:
     registry-username: "trodix"
     registry-token:
     registry-email: "sebastien.vallet89@gmail.com"
+  springactuator:
+    actuator-endpoints:
+      - "http://localhost:8010/actuator"

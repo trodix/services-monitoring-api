@@ -1,4 +1,4 @@
-package com.trodix.monitoring.servicesmonitoringapi.config;
+package com.trodix.monitoring.servicesmonitoringapi.domain.adapters.docker;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.bind.ConstructorBinding;
