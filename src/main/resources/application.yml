@@ -1,0 +1,8 @@
+
+adapters:
+  docker:
+    docker-host: "unix:///var/run/docker.sock"
+    registry-url: "ghcr.io"
+    registry-username: "trodix"
+    registry-token:
+    registry-email: "sebastien.vallet89@gmail.com"
