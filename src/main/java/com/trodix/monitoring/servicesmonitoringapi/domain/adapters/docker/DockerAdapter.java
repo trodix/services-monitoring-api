@@ -9,7 +9,6 @@ import com.github.dockerjava.httpclient5.ApacheDockerHttpClient;
 import com.github.dockerjava.transport.DockerHttpClient;
 import com.trodix.monitoring.servicesmonitoringapi.api.responses.HealthStatus;
 import com.trodix.monitoring.servicesmonitoringapi.domain.adapters.ServiceStatusAdapter;
-import com.trodix.monitoring.servicesmonitoringapi.domain.adapters.docker.DockerAdapterProperties;
 import com.trodix.monitoring.servicesmonitoringapi.domain.models.ServiceStatus;
 import org.springframework.stereotype.Service;
 
@@ -25,10 +24,6 @@ public class DockerAdapter implements ServiceStatusAdapter {
 
         DockerClientConfig config= DefaultDockerClientConfig.createDefaultConfigBuilder()
                 .withDockerHost(properties.dockerHost())
-                .withRegistryUsername(properties.registryUsername())
-                .withRegistryPassword(properties.registryToken())
-                .withRegistryEmail(properties.registryEmail())
-                .withRegistryUrl(properties.registryUrl())
                 .build();
 
         DockerHttpClient httpClient = new ApacheDockerHttpClient.Builder()
