@@ -1,4 +1,4 @@
-package com.trodix.monitoring.servicesmonitoringapi.domain.adapters.http;
+package com.trodix.monitoring.servicesmonitoringapi.api.health.http;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

@@ -1,6 +1,5 @@
-package com.trodix.monitoring.servicesmonitoringapi.domain;
+package com.trodix.monitoring.servicesmonitoringapi.api.diskusage;
 
-import com.trodix.monitoring.servicesmonitoringapi.domain.models.DiskPartitionUsage;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

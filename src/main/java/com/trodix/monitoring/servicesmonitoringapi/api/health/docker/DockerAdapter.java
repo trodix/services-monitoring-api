@@ -1,4 +1,4 @@
-package com.trodix.monitoring.servicesmonitoringapi.domain.adapters.docker;
+package com.trodix.monitoring.servicesmonitoringapi.api.health.docker;
 
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.model.Container;
@@ -7,9 +7,9 @@ import com.github.dockerjava.core.DockerClientConfig;
 import com.github.dockerjava.core.DockerClientImpl;
 import com.github.dockerjava.httpclient5.ApacheDockerHttpClient;
 import com.github.dockerjava.transport.DockerHttpClient;
-import com.trodix.monitoring.servicesmonitoringapi.domain.models.HealthStatus;
-import com.trodix.monitoring.servicesmonitoringapi.domain.adapters.ServiceStatusAdapter;
-import com.trodix.monitoring.servicesmonitoringapi.domain.models.ServiceStatus;
+import com.trodix.monitoring.servicesmonitoringapi.api.health.HealthStatus;
+import com.trodix.monitoring.servicesmonitoringapi.api.health.ServiceStatusAdapter;
+import com.trodix.monitoring.servicesmonitoringapi.api.health.ServiceStatus;
 import org.springframework.stereotype.Service;
 
 import java.time.Duration;

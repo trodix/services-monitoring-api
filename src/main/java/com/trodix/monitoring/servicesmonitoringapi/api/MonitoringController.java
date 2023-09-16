@@ -1,9 +1,9 @@
-package com.trodix.monitoring.servicesmonitoringapi.api.controllers;
+package com.trodix.monitoring.servicesmonitoringapi.api;
 
-import com.trodix.monitoring.servicesmonitoringapi.domain.DiskUsageService;
-import com.trodix.monitoring.servicesmonitoringapi.domain.models.DiskPartitionUsage;
-import com.trodix.monitoring.servicesmonitoringapi.domain.models.HealthStatus;
-import com.trodix.monitoring.servicesmonitoringapi.domain.adapters.AdapterAggregator;
+import com.trodix.monitoring.servicesmonitoringapi.api.diskusage.DiskUsageService;
+import com.trodix.monitoring.servicesmonitoringapi.api.diskusage.DiskPartitionUsage;
+import com.trodix.monitoring.servicesmonitoringapi.api.health.AdapterAggregator;
+import com.trodix.monitoring.servicesmonitoringapi.api.health.HealthStatus;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/services")
 @RequiredArgsConstructor
-public class HealthCheckController {
+public class MonitoringController {
 
     private final AdapterAggregator aggregator;
 

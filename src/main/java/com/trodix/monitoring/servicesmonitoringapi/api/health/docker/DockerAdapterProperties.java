@@ -1,4 +1,4 @@
-package com.trodix.monitoring.servicesmonitoringapi.domain.adapters.docker;
+package com.trodix.monitoring.servicesmonitoringapi.api.health.docker;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

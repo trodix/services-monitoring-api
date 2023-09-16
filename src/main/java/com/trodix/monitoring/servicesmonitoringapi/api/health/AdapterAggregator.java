@@ -1,9 +1,8 @@
-package com.trodix.monitoring.servicesmonitoringapi.domain.adapters;
+package com.trodix.monitoring.servicesmonitoringapi.api.health;
 
-import com.trodix.monitoring.servicesmonitoringapi.domain.models.HealthStatus;
-import com.trodix.monitoring.servicesmonitoringapi.domain.adapters.docker.DockerAdapter;
-import com.trodix.monitoring.servicesmonitoringapi.domain.adapters.http.HttpAdapter;
-import com.trodix.monitoring.servicesmonitoringapi.domain.adapters.springactuator.SpringActuatorAdapter;
+import com.trodix.monitoring.servicesmonitoringapi.api.health.docker.DockerAdapter;
+import com.trodix.monitoring.servicesmonitoringapi.api.health.http.HttpAdapter;
+import com.trodix.monitoring.servicesmonitoringapi.api.health.springactuator.SpringActuatorAdapter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

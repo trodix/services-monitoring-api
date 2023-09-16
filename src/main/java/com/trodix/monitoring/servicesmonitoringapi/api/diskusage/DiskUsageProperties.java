@@ -1,4 +1,4 @@
-package com.trodix.monitoring.servicesmonitoringapi.domain;
+package com.trodix.monitoring.servicesmonitoringapi.api.diskusage;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

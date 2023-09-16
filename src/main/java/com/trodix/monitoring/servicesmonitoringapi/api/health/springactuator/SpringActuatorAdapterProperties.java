@@ -1,4 +1,4 @@
-package com.trodix.monitoring.servicesmonitoringapi.domain.adapters.springactuator;
+package com.trodix.monitoring.servicesmonitoringapi.api.health.springactuator;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

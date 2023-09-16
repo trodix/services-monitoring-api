@@ -1,8 +1,8 @@
-package com.trodix.monitoring.servicesmonitoringapi.domain.adapters.http;
+package com.trodix.monitoring.servicesmonitoringapi.api.health.http;
 
-import com.trodix.monitoring.servicesmonitoringapi.domain.models.HealthStatus;
-import com.trodix.monitoring.servicesmonitoringapi.domain.adapters.ServiceStatusAdapter;
-import com.trodix.monitoring.servicesmonitoringapi.domain.models.ServiceStatus;
+import com.trodix.monitoring.servicesmonitoringapi.api.health.HealthStatus;
+import com.trodix.monitoring.servicesmonitoringapi.api.health.ServiceStatusAdapter;
+import com.trodix.monitoring.servicesmonitoringapi.api.health.ServiceStatus;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
