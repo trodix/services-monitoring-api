@@ -52,7 +52,7 @@ public class DockerAdapter implements ServiceStatusAdapter {
                 .map(c ->
                         new HealthStatus(
                                 c.getNames()[0],
-                                c.getState().equals("Running") ? ServiceStatus.UP : ServiceStatus.DOWN,
+                                c.getState().equalsIgnoreCase("running") ? ServiceStatus.UP : ServiceStatus.DOWN,
                                 c.getStatus()))
                 .toList();
 
