@@ -3,8 +3,8 @@
 ## Features
 
 - Docker containers monitoring
-- Spring Boot Actuator endpoint
-- HTTP requests (without auth)
+- Spring Boot Actuator endpoint (no auth)
+- HTTP requests (no auth)
 
 ## Usage
 
