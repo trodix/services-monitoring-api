@@ -6,6 +6,7 @@
 - Spring Boot Actuator endpoint (no auth)
 - HTTP requests (no auth)
 - Disk Usage
+- Docker containers logging
 
 ## Usage
 
@@ -31,6 +32,8 @@ diskusage:
     - "/home"
 ```
 
+### Health endpoint
+
 `curl localhost:9015/api/v1/services/health | jq`
 
 ```json
@@ -52,6 +55,8 @@ diskusage:
   }
 ]
 ```
+
+### Disk usage endpoint
 
 `curl localhost:9015/api/v1/services/disk-usage | jq`
 
@@ -89,3 +94,8 @@ diskusage:
   }
 ]
 ```
+
+### Docker logs endpoint
+
+`curl "localhost:9015/api/v1/services/logs/services-monitoring-api-counter-1?since=2023-09-21T19:00:00&until=2023-09-21T22:00:00"`
+

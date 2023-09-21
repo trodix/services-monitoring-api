@@ -2,40 +2,19 @@ package com.trodix.monitoring.servicesmonitoringapi.api.health.docker;
 
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.model.Container;
-import com.github.dockerjava.core.DefaultDockerClientConfig;
-import com.github.dockerjava.core.DockerClientConfig;
-import com.github.dockerjava.core.DockerClientImpl;
-import com.github.dockerjava.httpclient5.ApacheDockerHttpClient;
-import com.github.dockerjava.transport.DockerHttpClient;
 import com.trodix.monitoring.servicesmonitoringapi.api.health.HealthStatus;
-import com.trodix.monitoring.servicesmonitoringapi.api.health.ServiceStatusAdapter;
 import com.trodix.monitoring.servicesmonitoringapi.api.health.ServiceStatus;
+import com.trodix.monitoring.servicesmonitoringapi.api.health.ServiceStatusAdapter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.Duration;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class DockerAdapter implements ServiceStatusAdapter {
 
     private final DockerClient dockerClient;
-
-    public DockerAdapter(DockerAdapterProperties properties) {
-
-        DockerClientConfig config= DefaultDockerClientConfig.createDefaultConfigBuilder()
-                .withDockerHost(properties.dockerHost())
-                .build();
-
-        DockerHttpClient httpClient = new ApacheDockerHttpClient.Builder()
-                .dockerHost(config.getDockerHost())
-                .sslConfig(config.getSSLConfig())
-                .maxConnections(100)
-                .connectionTimeout(Duration.ofSeconds(30))
-                .responseTimeout(Duration.ofSeconds(45))
-                .build();
-
-        this.dockerClient = DockerClientImpl.getInstance(config, httpClient);
-    }
 
     @Override
     public List<HealthStatus> getServicesStatus() {
